@@ -144,7 +144,7 @@ VulnScanner/
 ## 📚 参见
 
 - [QFluentWidgets](https://qfluentwidgets.com/)：QFluentWidgets是一个基于 C++ Qt/PyQt/PySide 的流畅设计组件库。
-- [httpx](https://github.com/encode/httpx?tab=readme-ov-file):HTTPX 是一个功能齐全的 Python 3 HTTP 客户端库。它集成了命令行客户端，支持 HTTP/1.1 和 HTTP/2，并提供同步和异步 API。
+- [httpx](https://github.com/encode/httpx?tab=readme-ov-file): HTTPX 是一个功能齐全的 Python 3 HTTP 客户端库。它集成了命令行客户端，支持 HTTP/1.1 和 HTTP/2，并提供同步和异步 API。
 
 ## ⚠️ 免责声明
 
