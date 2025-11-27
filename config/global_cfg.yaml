@@ -1,0 +1,22 @@
+MakeClientConfig:
+  # 连接超时最大时间(s)
+  MaxConnectTimeout: 5 
+  # 读取超时最大时间(s)
+  MaxReadTimeout: 10
+  # 写超时最大时间(s)
+  MaxWriteTimeout: 10
+  # 连接池最大等待时间(s)
+  MaxPoolDelay: 10
+  # 连接池最大空闲连接比例(最大连连接数百分比)
+  MaxKeepaliveConnectionsRatio: 0.1
+
+Retry:
+  # 重试状态码
+  StatusCodes:
+    - 429
+    - 500
+    - 502
+    - 503
+    - 504
+  # 重试退避基础等待时间(s)
+  BaseDelaySeconds: 0.3

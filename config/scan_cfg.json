@@ -1,0 +1,13 @@
+{
+    "Scan": {
+        "Concurrency": 16,
+        "Mode": "ALONE",
+        "UsePocScript": "POC",
+        "SkipWriteContent": true,
+        "SkipVerifyCookie": true,
+        "EnableProxy": false,
+        "SkipProxyVerify": false,
+        "MaxRetries": 3,
+        "EnableRetryBackoff": false
+    }
+}

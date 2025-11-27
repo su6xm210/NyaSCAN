@@ -1,0 +1,13 @@
+{
+    "Proxy": {
+        "Addresses": [
+            "http://127.0.0.1:8080"
+        ],
+        "VerificationAddress": [
+            "http://baidu.com",
+            "https://ipinfo.io"
+        ],
+        "EnableRotation": false
+    },
+    "OutputDetailedInfo": false
+}

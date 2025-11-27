@@ -1,0 +1,22 @@
+{
+    "Scan": {
+        "Concurrency": 16,
+        "EnableProxy": false,
+        "EnableRetryBackoff": false,
+        "MaxRetries": 3,
+        "Mode": "ALONE",
+        "SkipProxyVerify": false,
+        "SkipVerifyCookie": true,
+        "SkipWriteContent": true,
+        "UsePocScript": "POC"
+    },
+    "QFluentWidgets": {
+        "FontFamilies": [
+            "Segoe UI",
+            "Microsoft YaHei",
+            "PingFang SC"
+        ],
+        "ThemeColor": "#ff009faa",
+        "ThemeMode": "Light"
+    }
+}

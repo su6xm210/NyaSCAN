@@ -1,0 +1,14 @@
+work func error: not enough values to unpack (expected 2, got 1)
+  : header格式错误
+  
+Invalid proxies infomation address
+  : 代理服务器地址错误，在使用代理时需要确认代理有效
+
+work func error: list index out of range
+  : 检测规则'二次请求'字段值错误
+
+work func error: Poc not found
+  : 'Poc'不存在
+
+ERROR: missing xxx, unterminated subpattern at position xx
+  : 检测规则'正则匹配'字段值错误
