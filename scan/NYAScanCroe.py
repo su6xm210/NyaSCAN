@@ -263,7 +263,7 @@ async def concurrency_tasks(task_queue, client, url, header, backoff, max_attemp
     await close_db_pool()
 
 def load_global_cfg():
-    with open('config/global_cfg.yaml', 'r', encoding='utf-8') as file:
+    with open('config/networkother.yaml', 'r', encoding='utf-8') as file:
         data = yaml.safe_load(file)
     global MAKE_CLIENT_CONFIG
     global RETRY_TACTICS

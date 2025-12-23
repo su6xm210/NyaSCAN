@@ -34,7 +34,7 @@ class EditPythonPage(QWidget):
         layout.setContentsMargins(30, 30, 30, 30)
         layout.setSpacing(20)
         
-        self.title_label = SubtitleLabel(self.tr("Python代码编辑器"), self)
+        self.title_label = SubtitleLabel(self.tr("代码编辑器"), self)
         layout.addWidget(self.title_label)
         
         toolbar_layout = QHBoxLayout()
@@ -104,9 +104,9 @@ class EditPythonPage(QWidget):
         """打开文件"""
         file_path, _ = QFileDialog.getOpenFileName(
             self,
-            self.tr("打开Python文件"),
+            self.tr("打开Python/配置文件"),
             "",
-            self.tr("Python Files (*.py);;All Files (*)")
+            self.tr("Code Files (*.py *.json *.yaml *.yml);;All Files (*)")
         )
         
         if file_path:

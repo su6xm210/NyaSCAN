@@ -4,7 +4,7 @@ from scan import NYAScanCroe as nyascan
 import json
 
 
-with open("config/proxy.json", "r") as f:
+with open("config/network.json", "r") as f:
     config = json.load(f)
 OutputDetailedInfo = config['OutputDetailedInfo']
 if OutputDetailedInfo:

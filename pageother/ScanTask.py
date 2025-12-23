@@ -9,6 +9,7 @@ from PySide6.QtGui import QTextOption
 from qfluentwidgets import (
     CardWidget, BodyLabel, StrongBodyLabel, PushButton
 )
+from PySide6.QtWidgets import QMessageBox
 
 from pagepoc import StyleFile
 from scan.scan_controller import scan_controller
@@ -54,10 +55,22 @@ class ScanTaskPage(QWidget):
         self.scroll_area.setWidget(self.card_container)
         main_layout.addWidget(self.scroll_area)
         
+        button_layout = QHBoxLayout()
+        
         self.refresh_button = PushButton("刷新", self)
         self.refresh_button.setStyleSheet(StyleFile.push_button_qss)
+        self.refresh_button.setFixedWidth(100)
         self.refresh_button.clicked.connect(self.refresh_tasks)
-        main_layout.addWidget(self.refresh_button)
+        button_layout.addWidget(self.refresh_button)
+        
+        self.generate_report_button = PushButton("生成测试报告", self)
+        self.generate_report_button.setStyleSheet(StyleFile.push_button_qss)
+        self.generate_report_button.setFixedWidth(120)
+        self.generate_report_button.clicked.connect(self.generate_test_report)
+        button_layout.addWidget(self.generate_report_button)
+        button_layout.addStretch()
+        
+        main_layout.addLayout(button_layout)
         
         self.init_detail_panel()
         
@@ -342,6 +355,14 @@ class ScanTaskPage(QWidget):
                 print(f"删除结果文件时出错: {str(e)}")
         
         self.refresh_tasks()
+
+    def generate_test_report(self):
+        try:
+            from GenerateReport import main as generate_report_main
+            generate_report_main()
+            QMessageBox.information(self, "报告生成成功", f"测试报告已生成到项目根目录的scan_report.html")
+        except Exception as e:
+            QMessageBox.critical(self, "报告生成失败", f"生成测试报告时出错：\n{str(e)}")
 
     def show_detail_panel(self, title: str, content: str):
         self.detail_title.setText(title)

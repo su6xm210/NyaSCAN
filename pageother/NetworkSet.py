@@ -81,7 +81,7 @@ class ProxyConfig(QConfig):
 
 proxy_cfg = ProxyConfig()
 
-config_path = Path("./config/proxy.json")
+config_path = Path("./config/network.json")
 config_path.parent.mkdir(parents=True, exist_ok=True)
 
 proxy_cfg.load_from_file(config_path)

@@ -13,9 +13,9 @@ from pagepoc.ShowPOCInfo import ShowPocInfo
 from pagepoc.ModifyPOC import ModifyPOC
 from pagepoc.NewPOCScript import NewPOCScript
 from pagepoc.ShowPOCScriptInfo import ShowPocScriptInfo
-from pageother.Proxy import ProxyPage
+from pageother.NetworkSet import ProxyPage
 from pageother.ImportExport import ImportExportPage
-from pageother.EditPython import EditPythonPage
+from pageother.EditCode import EditPythonPage
 from pageother.Scan import ScanPage
 from pageother.ScanTask import ScanTaskPage
 from pageother.HomePage import HomePage
@@ -63,7 +63,7 @@ class MainWindow(FluentWindow):
         self.scan_history_page = ScanTaskPage("任务", "ScanTaskPage")
         
         self.proxy_page = ProxyPage("代理", "ProxyPage")
-        self.edit_python_page = EditPythonPage("编辑Python脚本", "EditPython")
+        self.edit_python_page = EditPythonPage("编辑代码", "EditPython")
         self.iepage = ImportExportPage("导入导出", "ImportExport")
         self.about_page = AboutPage("关于", "aboutPage")
 
@@ -81,7 +81,7 @@ class MainWindow(FluentWindow):
         self.addSubInterface(self.scan_history_page, FIF.HISTORY, "任务")
         
         self.addSubInterface(self.proxy_page, FIF.GLOBE, "代理")
-        self.addSubInterface(self.edit_python_page, FIF.EDIT, "编辑Python")
+        self.addSubInterface(self.edit_python_page, FIF.EDIT, "编辑代码")
         self.addSubInterface(self.iepage, FIF.SHARE, "导入导出")
         
         self.addSubInterface(self.about_page, FIF.INFO, "关于", position=NavigationItemPosition.BOTTOM)

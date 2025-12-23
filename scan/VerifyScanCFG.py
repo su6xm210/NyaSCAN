@@ -109,7 +109,7 @@ def verify_scan_cfg(cfg_data):
     return True, None
         
 def start_proxy()->tuple:
-    with open("./config/proxy.json", "r", encoding="utf-8") as f:
+    with open("./config/network.json", "r", encoding="utf-8") as f:
         proxy_cfg = json.load(f)
     if 'Proxy' in proxy_cfg:
         print("正在检查代理配置...")
