@@ -99,6 +99,6 @@ class AboutPage(QWidget):
     def init_content(self):
         content = """<h1>关于</h1>
             <h2></h2>
-            <p>更多请访问: </p>
+            <p>更多请访问: https://github.com/su6xm210/NyaSCAN</p>
             """
         self.text_browser.setHtml(content)
